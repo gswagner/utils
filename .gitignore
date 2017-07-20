@@ -1,0 +1,10 @@
+*.pyc
+*.so
+*.o
+*.a
+*~
+.idea
+*.hpp.gch
+.depend
+\#*
+.#*

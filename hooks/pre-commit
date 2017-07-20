@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Get the files to be commited
+FILES=$(git diff --name-only --staged)
+# Test staged files for problems. 
+# foo || bar runs bar if foo fails
+./utils/hooks/conflicts_resolved.sh $FILES || exit -1
+./utils/hooks/no_python_tabs.sh $FILES || exit -1
